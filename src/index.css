@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+}
+
+.btn {
+  background-color: #8a0e0e;
+  color: #060500;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin: 9px;
+  padding: 5px;
+  border: solid 1.5px black;
+  border-radius: 6px;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+
+  font-size: 60px;
+}
+
+.btn:hover {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.btn:active {
+  background-color: rgb(28, 11, 157);
+  color: rgb(247, 239, 239);
+}
+
+.btn.disabled {
+  cursor: default;
+}
+
+.btn.disabled:hover {
+  font-size: 60px;
+  background-color: #8a0e0e;
+  color: #060500;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.disabled .btn {
+  cursor: default;
+}
+
+.disabled .btn {
+  background-color: #8a0e0e;
+  color: #060500;
+}
+
+.game-info>div {
+  color: white;
+  font-size: 17px;
+  padding: 3px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  flex-direction: column;
+  position: relative;
+}
+
+.game-info ul {
+  list-style-type: none;
+  position: relative;
+  left: -35px;
+}
+
+.game-info ul li button {
+  padding: 7px;
+  cursor: pointer;
 }
